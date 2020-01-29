@@ -28,11 +28,9 @@ sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/maste
             recordIssues enabledForFailure: true, tools: [java(), javaDoc()],
 sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
 recordIssues enabledForFailure: true, tool: pmdParser(pattern:
-'target/test-classes/io/jenkins/plugins/analysis/warnings/recorder/module-
-filter/pmd.xml'), sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-
+'target/test-classes/io/jenkins/plugins/analysis/warnings/recorder/module-filter/pmd.xml'), sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-
 ng-plugin/master'
-            recordIssues enabledForFailure: true, tool: spotBugs(pattern:
-'target/test-classes/io/jenkins/plugins/analysis/warnings/spotbugsXml.xml'),
+            recordIssues enabledForFailure: true, tool: spotBugs(pattern:'target/test-classes/io/jenkins/plugins/analysis/warnings/spotbugsXml.xml'),
 sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
             recordIssues enabledForFailure: true, tool: cpd(pattern:
 'target/cpd.xml'), sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings- ng-plugin/master'
