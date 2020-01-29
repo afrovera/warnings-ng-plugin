@@ -7,8 +7,7 @@ pipeline {
     stages {
         stage('Spin-up Warnings') {
             steps {
-                sh 'mvn -B -DskipTests clean verify checkstyle:checkstyle pmd:pmd
-findbugs:findbugs'
+                sh 'mvn -B -DskipTests clean verify checkstyle:checkstyle pmd:pmd findbugs:findbugs'
 } }
         stage("OWASP Dependency Checks") {
             steps {
