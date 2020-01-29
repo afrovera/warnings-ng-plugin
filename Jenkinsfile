@@ -20,20 +20,12 @@ zipExtensions: ''
 }
     post {
         always {
-            recordIssues enabledForFailure: true, tool: mavenConsole(),
-referenceJobName: 'Plugins/warnings-ng-plugin/master'
-            recordIssues enabledForFailure: true, tool: checkStyle(pattern:
-'target/test-classes/io/jenkins/plugins/analysis/warnings/checkstyle.xml'),
-sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
-            recordIssues enabledForFailure: true, tools: [java(), javaDoc()],
-sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
-            recordIssues enabledForFailure: true, tool: pmdParser(pattern:
-'target/test-classes/io/jenkins/plugins/analysis/warnings/recorder/module-filter/pmd.xml'), sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
-            recordIssues enabledForFailure: true, tool: spotBugs(pattern:'target/test-classes/io/jenkins/plugins/analysis/warnings/spotbugsXml.xml'),
-sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
-            recordIssues enabledForFailure: true, tool: cpd(pattern:
-'target/cpd.xml'), sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings- ng-plugin/master'
-            recordIssues enabledForFailure: true, tool:
-dependencyCheckPublisher canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
+            recordIssues enabledForFailure: true, tool: mavenConsole(),referenceJobName: 'Plugins/warnings-ng-plugin/master'
+            recordIssues enabledForFailure: true, tool: checkStyle(pattern:'target/test-classes/io/jenkins/plugins/analysis/warnings/checkstyle.xml'),sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
+            recordIssues enabledForFailure: true, tools: [java(), javaDoc()],sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
+            recordIssues enabledForFailure: true, tool: pmdParser(pattern:'target/test-classes/io/jenkins/plugins/analysis/warnings/recorder/module-filter/pmd.xml'), sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
+            recordIssues enabledForFailure: true, tool: spotBugs(pattern:'target/test-classes/io/jenkins/plugins/analysis/warnings/spotbugsXml.xml'),sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings-ng-plugin/master'
+            recordIssues enabledForFailure: true, tool: cpd(pattern:'target/cpd.xml'), sourceCodeEncoding: 'UTF-8', referenceJobName: 'Plugins/warnings- ng-plugin/master'
+            recordIssues enabledForFailure: true, tool: dependencyCheckPublisher canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
 } }
 }
