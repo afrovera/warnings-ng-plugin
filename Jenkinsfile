@@ -12,9 +12,9 @@ pipeline {
         stage("OWASP Dependency Checks") {
             steps {
                 dependencyCheckAnalyzer datadir: '', hintsFile: '',
- includeHtmlReports: false, includeCsvReports: false, includeJsonReports: false, isAutoupdateDisabled: false,
-includeVulnReports: false, outdir: '', scanpath: 'src',
 skipOnScmChange: false, skipOnUpstreamChange: false, suppressionFile: '',
+includeHtmlReports: false, includeCsvReports: false, includeJsonReports: false, isAutoupdateDisabled: false,
+includeVulnReports: false, outdir: '', scanpath: 'src',
 zipExtensions: ''
 } }
 }
